@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #bbdfc8;
+}
+
+.topbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav{
+    display: flex;
+    background-color: #00af91;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav .nav-side{
+    width: 40%;
+    height: 50px;
+    background-color:#f58634;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+nav ul li{
+   list-style: none;
+   margin-left: 40px;
+   text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'francois_oneregular';
+}
+
+nav .logo h4{
+    font-family: 'francois_oneregular';
+    font: 25px/25px 'francois_oneregular';
+    padding-left: 10px;
+}
+
+nav .nav-side .hamburger{
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    z-index: -1;
+    position: relative;
+}
+
+nav .nav-side .hamburger input{
+    width: 100px;
+    position: absolute;
+}
+
+nav .nav-side .hamburger div{
+    width: 40px;
+    height: 10px;
+    background-color: white;
+    margin-bottom: 3px;
+    border-radius: 2px;
+}
+
+.banner{
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.banner img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content{
+    width: 80%;
+    height: 1000px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+
+/* Fonts */
+
+
+@font-face {
+    font-family: 'francois_oneregular';
+    src: url('fonts/francoisone-webfont.woff2') format('woff2'),
+         url('fonts/francoisone-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Media */
+
+@media screen and (max-width: 768px){
+    nav ul li{
+        margin-left: 20px;
+    }
+
+    nav .nav-side{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    nav ul{
+        display: none;
+    }
+
+    nav .nav-side{
+        background-color:  #00af91;
+        justify-content: right;
+        margin-right: 5px;
+    }
+
+    nav .nav-side .hamburger{
+        display: block;
+        z-index: 2;
+        margin-top: 28px;
+    }
+
+    nav .logo h4{
+        font: 18px/25px 'francois_oneregular';
+    }
+
+    nav .nav-side .hamburger div{
+        width: 30px;
+        height: 5px;
+    }
+
+}
