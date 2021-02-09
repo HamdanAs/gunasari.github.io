@@ -161,7 +161,7 @@ body{
 
 .profil-desa{
     grid-area: profil;
-    text-align: center;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,7 +169,7 @@ body{
 }
 
 .profil-desa p{
-    padding: 10px 10px;
+    padding: 10px 20px;
 }
 
 .profil-desa h4{
@@ -379,5 +379,10 @@ footer div{
 
     footer div p{
         margin-left: 10px;
+    }
+
+    .banner{
+        border-right: 6px solid #204051;
+        border-bottom: 0;
     }
 }
