@@ -322,7 +322,7 @@ footer div{
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: black;
+        background-color: #204651;
         width: 100%;
         flex-direction: column;
         justify-content: space-evenly;
@@ -335,6 +335,7 @@ footer div{
 
     nav ul.slide{
         opacity: 0.9;
+        position: fixed;
         transform: translateY(0);
         z-index: 2;
     }
@@ -384,5 +385,9 @@ footer div{
     .banner{
         border-right: 6px solid #204051;
         border-bottom: 0;
+    }
+
+    .profil-desa{
+        text-align: center;
     }
 }
