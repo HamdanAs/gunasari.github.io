@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ddd;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+/* Header */
+
+.header{
+    display: grid;
+    grid-template-areas: 
+        'banner banner feature-1'
+        'banner banner feature-2';
+}
+
+.header > * {
+    border-top: 6px solid #204051;
+    border-left: 6px solid #204051;
+}
+
+.banner{
+    grid-area: banner;
+    min-height: 350px;
+    background-image: url(../img/images/full/sumedang.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    box-sizing: border-box;
+    border-bottom: 6px solid #204051;
+}
+
+.banner > *{
+    display: none;
+}
+
+.features{
+    color: white;
+    display: grid;
+    place-content: end start;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.features a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.features .block{
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.feature-1{
+    grid-area: feature-1;
+    min-height: 200px;
+    background-image: url(../img/images/full/gerakjalan.jpg);
+    background-size: cover;
+    background-position: center;
+    border-right: 6px solid #204051;
+}
+
+.feature-2{
+    grid-area: feature-2;
+    min-height: 200px;
+    background-image: url(../img/images/full/Cihonje.JPG);
+    background-size: cover;
+    background-position: center;
+    border-right: 6px solid #204051;
+    border-bottom: 6px solid #204051;
+}
+
+.features p{
+    font-weight: 200;
+}
+
+/* Nav */
+
+.menu{
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
+}
+
+.menu .logo{
+    font-size: 1.2em;
+    color:#082c3f;
+    text-transform: uppercase;
+}
+
+.menu ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-content: center;
+    gap: 5px;
+}
+
+.menu a{
+    display: block;
+    background-color: #204051;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+
+/* Container */
+.container{
+    display: grid;
+    gap: 5px;
+}
+
+/* Services */
+.services{
+    display: grid;
+    grid-template-areas: 
+        'profil profil profil'
+        'visimisi kegiatan struktur'
+        'datapenduduk sosialmedia dll';
+    margin-top: 10px;
+    align-items: center;
+    gap: 5px;
+}
+
+.services img{
+    width: 190px;
+}
+
+.services a{
+    text-decoration: none;
+    color: black;
+}
+
+.services .sub-icon{
+    width: 100px;
+    grid-area: icon;
+}
+
+.service{
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.service p {
+    font-weight: 200;
+}
+
+.visimisi, 
+.kegiatan, 
+.sosialmedia,
+.datapenduduk,
+.struktur,
+.dll {
+    display: grid;
+    grid-template-areas: 
+        'icon header'
+        'icon detail';
+}
+
+.profil-desa{
+    grid-area: profil;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil-desa p{
+    padding: 10px 20px;
+}
+
+.profil-desa h4{
+    font-size: 1.5em;
+}
+
+.visimisi{
+    grid-area: visimisi;
+}
+
+.kegiatan{
+    grid-area: kegiatan;
+}
+
+.sosialmedia{
+    grid-area: sosialmedia;
+}
+
+.datapenduduk{
+    grid-area: datapenduduk;
+}
+
+.struktur{
+    grid-area: struktur;
+}
+
+.dll{
+    grid-area: dll;
+}
+
+/* Footer */
+
+footer{
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #204651;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div{
+    width: 200px;
+    text-align: center;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28px;
+    position: relative;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle input{
+    display: block;
+    position: absolute;
+    background-color: black;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+/* Hamburger Menu Animation */
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(4px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(6px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Responsive Breakpoint */
+
+@media (max-width: 1024px){
+    .menu{
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+
+    .menu .logo{
+        display: none;
+    }
+
+    .banner > *{
+        display: block;
+    }
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        background-color: black;
+        color: white;
+    }
+
+    .services{
+        grid-template-areas: 
+        'profil profil'
+        'visimisi kegiatan'
+        'struktur datapenduduk'
+        'sosialmedia dll';
+    }
+}
+
+@media (max-width: 768px){
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+    
+    .menu-toggle{
+        display: flex;
+        z-index: 9999;
+    }
+
+    .menu ul{
+        display: flex;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #204651;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: -1;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    nav ul.slide{
+        opacity: 0.9;
+        position: fixed;
+        transform: translateY(0);
+        z-index: 2;
+    }
+}
+
+@media (max-width: 576px){
+    .header{
+        grid-template-areas: 
+            'banner'
+            'feature-1'
+            'feature-2';
+    }
+
+    .services{
+        grid-template-areas: 
+        'profil'
+        'visimisi'
+        'kegiatan'
+        'struktur'
+        'datapenduduk'
+        'sosialmedia'
+        'dll';
+    }
+
+    footer{
+        padding: 5px;
+        box-sizing: border-box;
+        background-color: #204651;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    footer div{
+        text-align: left;
+        display: flex;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    footer div p{
+        margin-left: 10px;
+    }
+
+    .banner{
+        border-right: 6px solid #204051;
+        border-bottom: 0;
+    }
+
+    .profil-desa{
+        text-align: center;
+    }
+}

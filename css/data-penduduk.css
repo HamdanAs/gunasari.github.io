@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ddd;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+/* Container */
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+/* nav */
+
+.menu{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-content: center;
+}
+
+.menu .logo{
+    font-size: 1.2em;
+    color:#082c3f;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-content: center;
+    gap: 5px;
+}
+
+.menu a{
+    display: block;
+    background-color: #204051;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+/* Data Penduduk */
+
+.data-penduduk{
+    display: grid;
+    grid-template-areas: 
+        'boy woman'
+        'boytext womantext'
+        'group group'
+        'grouptext grouptext';
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.data-penduduk img{
+    width: 200px;
+}
+
+.data-penduduk p{
+    text-align: center;
+}
+
+.data-penduduk .boy{
+    grid-area: boy;
+}
+
+.data-penduduk .woman{
+    grid-area: woman;
+}
+
+.data-penduduk .boytext{
+    grid-area: boytext;
+}
+
+.data-penduduk .womantext{
+    grid-area: womantext;
+}
+
+.data-penduduk .group{
+    grid-area: group;
+    grid-column: 3 2;
+}
+
+.data-penduduk .grouptext{
+    grid-area: grouptext;
+}
