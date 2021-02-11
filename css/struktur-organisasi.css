@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ddd;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+/* Container */
+.container{
+    width: 70%;
+    margin: auto;
+}
+
+/* nav */
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
+}
+
+.menu .logo{
+    font-size: 1.2em;
+    color:#082c3f;
+    text-transform: uppercase;
+}
+
+.menu ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-content: center;
+    gap: 5px;
+}
+
+.menu a{
+    display: block;
+    background-color: #204051;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
